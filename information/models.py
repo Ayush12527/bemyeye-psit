@@ -30,7 +30,7 @@ class Information(models.Model):
         myobj.save("static/audio/"+self.product_name+".mp3") 
         os.system("static/audio/"+self.product_name+".mp3") 
 
-        qrcode_img = qrcode.make("https://helpothers-bemyeye.herokuapp.com/static/audio/"+self.product_name+".mp3")
+        qrcode_img = qrcode.make("https://bemyeye.pythonanywhere.com/static/audio/"+self.product_name+".mp3")
         canvas = Image.new('RGB', (450, 450), 'white')
         # draw = ImageDraw.Draw(canvas)
         canvas.paste(qrcode_img)
